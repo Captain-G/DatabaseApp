@@ -1,151 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="76dp"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="10dp">
+    >
+
+    <TextView
+        android:id="@+id/tvJobtype"
+        android:layout_width="130dp"
+        android:layout_height="24dp"
+        android:text="@string/job_type"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        android:drawableStart="@drawable/ic_jobtype"
+        android:drawableLeft="@drawable/ic_jobtype"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/tvOfferedby"
+        android:layout_width="129dp"
+        android:layout_height="27dp"
+        android:drawableStart="@drawable/ic_offered_by"
+        android:drawableLeft="@drawable/ic_offered_by"
+        android:text="@string/offered_by"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvJobtype"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <TextView
+        android:id="@+id/tvPhonenumber"
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+        android:text="@string/phone_number"
+        android:drawableStart="@drawable/ic_call_black_24dp"
+        android:drawableLeft="@drawable/ic_call_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOfferedby"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:id="@+id/tvRequirements"
+        android:layout_width="133dp"
+        android:layout_height="25dp"
+        android:text="@string/requirements"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:drawableStart="@drawable/ic_requirements"
+        android:drawableLeft="@drawable/ic_requirements"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPhonenumber"
+        app:layout_constraintVertical_bias="0.034" />
+
+    <TextView
+        android:id="@+id/tvEstimatedpay"
+        android:layout_width="129dp"
+        android:layout_height="22dp"
+        android:text="@string/estimated_pay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawableStart="@drawable/ic_money"
+        android:drawableLeft="@drawable/ic_money"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toEndOf="@+id/tvJobtype"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="130dp"
+        android:layout_height="25dp"
+        android:drawableStart="@drawable/ic_location_on_black_24dp"
+        android:drawableLeft="@drawable/ic_location_on_black_24dp"
+        android:text="@string/location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toEndOf="@+id/tvOfferedby"
+        app:layout_constraintTop_toBottomOf="@+id/tvEstimatedpay"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/tvSlotsavailable"
+        android:layout_width="131dp"
+        android:layout_height="26dp"
+        android:text="@string/slots_available"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawableStart="@drawable/ic_slotsavailable"
+        android:drawableLeft="@drawable/ic_slotsavailable"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toEndOf="@+id/tvPhonenumber"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocation"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <ImageButton
+        android:id="@+id/addUser"
+        android:layout_width="36dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toEndOf="@+id/tvEstimatedpay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/ic_inquiries"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="34dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toEndOf="@+id/tvSlotsavailable"
+        app:layout_constraintTop_toBottomOf="@+id/addUser"
+        app:layout_constraintVertical_bias="0.04"
+        app:srcCompat="@drawable/ic_favorite_border_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tvJobtype"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:drawableStart="@drawable/ic_jobtype"
-                android:drawableLeft="@drawable/ic_jobtype"
-                android:padding="5dp"
-                android:text="@string/job_type" />
-
-            <TextView
-                android:id="@+id/tvOfferedby"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:drawableStart="@drawable/ic_offered_by"
-                android:drawableLeft="@drawable/ic_offered_by"
-                android:padding="5dp"
-                android:text="@string/offered_by" />
-
-            <TextView
-                android:id="@+id/tvPhonenumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:drawableStart="@drawable/ic_call_black_24dp"
-                android:drawableLeft="@drawable/ic_call_black_24dp"
-                android:padding="5dp"
-                android:text="@string/phone_number" />
-
-            <TextView
-                android:id="@+id/tvRequirements"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:drawableStart="@drawable/ic_requirements"
-                android:drawableLeft="@drawable/ic_requirements"
-                android:padding="5dp"
-                android:text="@string/requirements" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingLeft="20dp">
-
-            <TextView
-                android:id="@+id/tvEstimatedpay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:drawableStart="@drawable/ic_money"
-                android:drawableLeft="@drawable/ic_money"
-                android:padding="5dp"
-                android:text="@string/estimated_pay" />
-
-            <TextView
-                android:id="@+id/tvLocation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:drawableStart="@drawable/ic_location_on_black_24dp"
-                android:drawableLeft="@drawable/ic_location_on_black_24dp"
-                android:padding="5dp"
-                android:text="@string/location" />
-
-            <TextView
-                android:id="@+id/tvSlotsavailable"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:drawableStart="@drawable/ic_slotsavailable"
-                android:drawableLeft="@drawable/ic_slotsavailable"
-                android:padding="5dp"
-                android:text="@string/slots_available" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="125dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="right"
-            android:gravity="right"
-            android:paddingLeft="22dp"
-            android:paddingRight="30dp">
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20dp"
-                android:src="@drawable/ic_inquiries" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:src="@drawable/ic_like_red_24dp" />
-
-
-            <ImageButton
-                android:id="@+id/addUser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:src="@drawable/ic_add_black_24dp" />
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-
-
-
-
-</androidx.cardview.widget.CardView>
-
-
-
+</androidx.constraintlayout.widget.ConstraintLayout>
