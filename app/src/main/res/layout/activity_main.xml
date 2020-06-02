@@ -12,126 +12,164 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="20dp"
-        android:padding="3dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:padding="15dp"
         >
 
-        <ImageView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/login_image"
-            android:layout_gravity="center" />
+            android:text="@string/enter_details"
+            android:textSize="20sp"
+            android:visibility="visible"
+            android:padding="15dp"
+            android:textColor="@color/colorWhite"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add Data"
-            android:layout_gravity="center"
-            android:gravity="center" />
 
         <EditText
-            android:id="@+id/etName"
-            android:layout_width="match_parent"
+            android:id="@+id/etJobtype"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittext"
-            android:layout_gravity="center"
-            android:gravity="start"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:padding="10dp"
-            android:hint="Name"
-            android:drawableStart="@drawable/ic_user"
+            android:drawableLeft="@drawable/ic_jobtype"
             android:drawablePadding="10dp"
+            android:hint="JOB TYPE"
+            android:textColorHighlight="@color/colorWhite"
+            android:textColorLink="@color/colorWhite"
+            android:inputType="text"
+            android:padding="20dp"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etOfferedBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="OFFERED BY"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/ic_offered_by"
+            android:drawablePadding="10dp"
+            android:padding="20dp"
+            android:textSize="14sp"
+            android:textColorHint="#FFFFFF"
+            android:inputType="text"
+            />
+
+
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="PHONE NUMBER"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/ic_call_black_24dp"
+            android:drawablePadding="10dp"
+            android:padding="20dp"
+            android:textSize="14sp"
+            android:textColorHint="#F4F4F4"
+            android:inputType="text"
             />
 
         <EditText
-            android:id="@+id/etProfession"
-            android:layout_width="match_parent"
+            android:id="@+id/etRequirements"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="start"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/edittext"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:padding="10dp"
-            android:hint="Profession"
-            android:drawableStart="@drawable/ic_profession"
+            android:hint="REQUIREMENTS"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/ic_requirements"
             android:drawablePadding="10dp"
+            android:padding="20dp"
+            android:textSize="14sp"
+            android:textColorHint="#FFFFFF"
+            android:inputType="text"
+            />
+
+
+
+        <EditText
+            android:id="@+id/etEstimatedPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ESTIMATED PAY"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/ic_money"
+            android:drawablePadding="10dp"
+            android:padding="20dp"
+            android:textSize="14sp"
+            android:textColorHint="#FFF9F9"
+            android:inputType="text"
             />
 
         <EditText
-            android:id="@+id/etResidence"
-            android:layout_width="match_parent"
+            android:id="@+id/etLocation"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="start"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/edittext"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:padding="10dp"
-            android:hint="Residence"
-            android:drawableStart="@drawable/ic_home_black_24dp"
+            android:hint="LOCATION"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/ic_location_on_black_24dp"
             android:drawablePadding="10dp"
+            android:padding="20dp"
+            android:textSize="14sp"
+            android:textColorHint="#FFFFFF"
+            android:inputType="text"
             />
+
 
         <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
+            android:id="@+id/etSlotsAvailabile"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="start"
-            android:background="@drawable/edittext"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:padding="10dp"
-            android:hint="Password"
-            android:drawableStart="@drawable/ic_security_black_24dp"
+            android:hint="SLOTS AVAILABLE"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/ic_slotsavailable"
             android:drawablePadding="10dp"
+            android:padding="20dp"
+            android:textSize="14sp"
+            android:textColorHint="#FFFCFC"
+            android:inputType="text"
             />
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/addUser"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/ic_add_black_24dp"
-                android:layout_gravity="center"
-                android:layout_margin="20dp"
-                android:background="@drawable/edittext"
-                />
 
-            <ImageView
-                android:id="@+id/etEdit"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/ic_mode_edit_black_24dp"
-                android:layout_margin="20dp"
-                android:background="@drawable/ic_mode_edit_black_24dp"
-                android:layout_gravity="center" />
+            <ImageButton
+                android:id="@+id/btnPostJob"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="32dp"
+                android:src="@drawable/ic_forward_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/viewNext"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/viewNext"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/ic_view_headline_black_24dp"
-                android:background="@drawable/ic_view_headline_black_24dp"
-                android:layout_gravity="center" />
-
-
-
-        </LinearLayout>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_viewdata"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.084"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </LinearLayout>
-
 
 </ScrollView>

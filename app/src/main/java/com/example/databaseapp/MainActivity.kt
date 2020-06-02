@@ -19,28 +19,34 @@ class MainActivity : AppCompatActivity() {
 //        create an instance of a database
         val db : SQLiteDatabase = openOrCreateDatabase("appdb" , Context.MODE_PRIVATE,null)
 
-        db.execSQL("CREATE TABLE IF NOT EXISTS users(name VARCHAR, profession VARCHAR, residence VARCHAR, password VARCHAR)")
+        db.execSQL("CREATE TABLE IF NOT EXISTS jobs(jobtype VARCHAR, offeredby VARCHAR, phonenumber VARCHAR,requirements VARCHAR,estimatedpay VARCHAR,location VARCHAR, slotsavailabble VARCHAR)")
 
 //        listen to a click event on the add data image
-        addUser.setOnClickListener {
-            val name : String = etName.text.trim().toString()
-            val profession : String = etProfession.text.trim().toString()
-            val residence : String = etResidence.text.trim().toString()
-            val password : String = etPassword.text.trim().toString()
+        btnPostJob.setOnClickListener {
+            val jobtype : String = etJobtype.text.trim().toString()
+            val offeredby : String = etOfferedBy.text.trim().toString()
+            val phonenumber : String = etPhoneNumber.text.trim().toString()
+            val requirements : String = etRequirements.text.trim().toString()
+            val estimatedpay : String = etEstimatedPay.text.trim().toString()
+            val location : String = etLocation.text.trim().toString()
+            val slotsavailable : String = etSlotsAvailabile.text.trim().toString()
 
-            if(name.isEmpty() or profession.isEmpty() or residence.isEmpty() or password.isEmpty()){
+            if(jobtype.isEmpty() or offeredby.isEmpty() or phonenumber.isEmpty() or requirements.isEmpty() or estimatedpay.isEmpty() or location.isEmpty() or slotsavailable.isEmpty()){
 //                show message to the user
-                show_message("Missing Data" , "Please fill in all the fields")
+                show_message("Missing Data" , "Please fill in all the fields given")
             }else{
 //                store the data in the database
-                db.execSQL("INSERT INTO users VALUES('"+name+"','"+profession+"','"+residence+"','"+password+"')")
-                show_message("Success", "Data has been entered successfully")
+                db.execSQL("INSERT INTO jobs VALUES('"+jobtype+"','"+offeredby+"','"+phonenumber+"','"+requirements+"','"+estimatedpay+"','"+location+"','"+slotsavailable+"')")
+                show_message("Success", "Job has been posted successfully")
 
 //                clear the edit texts after successfully adding data into the database
-                etName.setText("")
-                etProfession.setText("")
-                etResidence.setText("")
-                etPassword.setText("")
+                etJobtype.setText("")
+                etOfferedBy.setText("")
+                etPhoneNumber.setText("")
+                etRequirements.setText("")
+                etEstimatedPay.setText("")
+                etLocation.setText("")
+                etSlotsAvailabile.setText("")
 
             }
         }

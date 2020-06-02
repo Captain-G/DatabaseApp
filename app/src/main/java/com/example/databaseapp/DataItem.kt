@@ -1,8 +1,11 @@
 package com.example.databaseapp
 
 class DataItem(
-    val name : String,
-    val profession : String,
-    val residence : String,
-    val password : String
+    val jobtype : String,
+    val offeredby : String,
+    val phonenumber : String,
+    val requirements : String,
+    val estimatedpay : String,
+    val location : String,
+    val slotsavailable : String
 ){}

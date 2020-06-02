@@ -1,5 +1,6 @@
 package com.example.databaseapp
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
@@ -11,13 +12,13 @@ import kotlinx.android.synthetic.main.activity_user.*
 
 class UserActivity : AppCompatActivity() {
 
+    @SuppressLint("Recycle")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user)
 
 //        add a new user
-
-        adduser.setOnClickListener {
+        newUser.setOnClickListener {
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
@@ -27,28 +28,30 @@ class UserActivity : AppCompatActivity() {
         val db : SQLiteDatabase = openOrCreateDatabase("appdb" , Context.MODE_PRIVATE,null)
 
 //        pull data from the users table
-        val sql = "SELECT * FROM users"
+        val sql = "SELECT * FROM jobs"
 
 //        create user list[array]
 
-        val users : ArrayList<DataItem> = ArrayList()
+        val jobs : ArrayList<DataItem> = ArrayList()
 
         val cursor = db.rawQuery(sql , null)
 
         if (cursor.count == 0){
-              show_message("No Users", "Seems like there are no users in the database")
+              show_message("No Jobs", "Seems like there are available jobs now.")
             }else{
                 while (cursor.moveToNext()) {
-                    users.add(
+                    jobs.add(
                         DataItem(
                             cursor.getString(0),
                             cursor.getString(1),
                             cursor.getString(2),
-                            cursor.getString(3)
+                            cursor.getString(3),
+                            cursor.getString(4),
+                            cursor.getString(5),
+                            cursor.getString(6)
                         )
                     )
-                    userList.adapter = CustomAdapter(this,users)
-
+                    jobsList.adapter = CustomAdapter(this,jobs)
                 }
         }
 

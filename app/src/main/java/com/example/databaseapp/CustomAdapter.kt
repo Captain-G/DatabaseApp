@@ -18,19 +18,23 @@ class CustomAdapter(var context: Context, var data: ArrayList<DataItem>): BaseAd
 
 
     private class ViewHolder(row:View?){
-        var name:TextView
-        var profession:TextView
-        var residence:TextView
-        var password:TextView
-        var imgdelete:ImageView
+        var jobtype:TextView
+        var offeredby:TextView
+        var phonenumber:TextView
+        var requirements:TextView
+        var estimatedpay:TextView
+        var location:TextView
+        var slotsavailable:TextView
 
         init {
 
-            this.name = row?.findViewById(R.id.tvName) as TextView
-            this.profession = row?.findViewById(R.id.tvProfession) as TextView
-            this.residence = row?.findViewById(R.id.tvresidence) as TextView
-            this.password = row?.findViewById(R.id.tvpassword) as TextView
-            this.imgdelete = row?.findViewById(R.id.imgDelete) as ImageView
+            this.jobtype = row?.findViewById(R.id.tvJobtype) as TextView
+            this.offeredby = row?.findViewById(R.id.tvOfferedby) as TextView
+            this.phonenumber = row?.findViewById(R.id.tvPhonenumber) as TextView
+            this.requirements = row?.findViewById(R.id.tvRequirements) as TextView
+            this.estimatedpay = row?.findViewById(R.id.tvEstimatedpay) as TextView
+            this.location = row?.findViewById(R.id.tvLocation) as TextView
+            this.slotsavailable = row?.findViewById(R.id.tvSlotsavailable) as TextView
 
         }
     }
@@ -51,10 +55,13 @@ class CustomAdapter(var context: Context, var data: ArrayList<DataItem>): BaseAd
             viewHolder = view.tag as ViewHolder
         }
         val DataItem:DataItem = getItem(position) as DataItem
-        viewHolder.name.text = DataItem.name
-        viewHolder.profession.text = DataItem.profession
-        viewHolder.residence.text = DataItem.residence
-        viewHolder.password.text = DataItem.password
+        viewHolder.jobtype.text = DataItem.jobtype
+        viewHolder.offeredby.text = DataItem.offeredby
+        viewHolder.phonenumber.text = DataItem.phonenumber
+        viewHolder.requirements.text = DataItem.requirements
+        viewHolder.estimatedpay.text = DataItem.estimatedpay
+        viewHolder.location.text = DataItem.location
+        viewHolder.slotsavailable.text = DataItem.slotsavailable
 
 
         return view as View
