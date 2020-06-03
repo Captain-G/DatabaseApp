@@ -15,10 +15,58 @@
 
         <ImageView
             android:id="@+id/newUser"
+            android:layout_width="48dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_adduser" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_adduser"
-            android:layout_gravity="center" />
+            android:text="@string/categories1"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="119dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+<!--job categories office work casual labourer it other-->
+                <ImageView
+                    android:layout_width="153dp"
+                    android:layout_height="121dp"
+                    android:src="@drawable/ic_home_black_24dp" />
+
+                <ImageView
+                    android:layout_width="153dp"
+                    android:layout_height="121dp"
+                    android:src="@drawable/ic_home_black_24dp" />
+
+                <ImageView
+                    android:layout_width="153dp"
+                    android:layout_height="121dp"
+                    android:src="@drawable/ic_home_black_24dp" />
+
+                <ImageView
+                    android:layout_width="153dp"
+                    android:layout_height="121dp"
+                    android:src="@drawable/ic_home_black_24dp" />
+
+                <ImageView
+                    android:layout_width="153dp"
+                    android:layout_height="121dp"
+                    android:src="@drawable/ic_home_black_24dp" />
+
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
 
         <ListView
             android:id="@+id/jobsList"
