@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/app_gradient"
     tools:context=".UserActivity">
 
     <LinearLayout
@@ -36,31 +37,48 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-<!--job categories office work casual labourer it other-->
+            <!--job categories office work casual labourer it other-->
                 <ImageView
                     android:layout_width="153dp"
                     android:layout_height="121dp"
-                    android:src="@drawable/ic_home_black_24dp" />
+                    android:layout_margin="10dp"
+                    android:src="@drawable/aviation" />
 
                 <ImageView
                     android:layout_width="153dp"
                     android:layout_height="121dp"
-                    android:src="@drawable/ic_home_black_24dp" />
+                    android:layout_margin="10dp"
+                    android:src="@drawable/art" />
 
                 <ImageView
                     android:layout_width="153dp"
                     android:layout_height="121dp"
-                    android:src="@drawable/ic_home_black_24dp" />
+                    android:layout_margin="10dp"
+                    android:src="@drawable/cooking" />
 
                 <ImageView
                     android:layout_width="153dp"
                     android:layout_height="121dp"
-                    android:src="@drawable/ic_home_black_24dp" />
+                    android:layout_margin="10dp"
+                    android:src="@drawable/eng" />
 
                 <ImageView
                     android:layout_width="153dp"
+                    android:layout_margin="10dp"
                     android:layout_height="121dp"
-                    android:src="@drawable/ic_home_black_24dp" />
+                    android:src="@drawable/sport" />
+
+                <ImageView
+                    android:layout_width="153dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="121dp"
+                    android:src="@drawable/binary" />
+
+                <ImageView
+                    android:layout_width="153dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="121dp"
+                    android:src="@drawable/tools" />
 
 
             </LinearLayout>

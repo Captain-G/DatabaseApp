@@ -8,7 +8,9 @@ import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_user.*
+import kotlinx.android.synthetic.main.card_row.*
 
 class UserActivity : AppCompatActivity() {
 
