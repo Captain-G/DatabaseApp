@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Message
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -54,6 +57,31 @@ class MainActivity : AppCompatActivity() {
             val viewDatabaseData = Intent(this,UserActivity::class.java)
             startActivity(viewDatabaseData)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+         super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.main,menu)
+
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+         var selectedOption = ""
+
+        when(item?.itemId){
+
+            R.id.aboutapp -> selectedOption = "About app"
+            R.id.getHelp -> selectedOption = "Get help"
+            R.id.testimonials -> selectedOption = "Testimonials"
+        }
+
+
+        Toast.makeText(this, "Option : " + selectedOption,Toast.LENGTH_SHORT).show()
+
+
+
+        return super.onOptionsItemSelected(item)
     }
 
     private fun show_message(title: String, message: String) {
